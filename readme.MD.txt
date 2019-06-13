@@ -1,0 +1,1 @@
+This Repo consist of weekly weather status.
