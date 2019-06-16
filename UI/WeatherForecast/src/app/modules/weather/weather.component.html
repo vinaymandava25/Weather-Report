@@ -1,0 +1,7 @@
+your location: <input type="text" class="form-control-sm" [(ngModel)]='location'>
+<button class="btn btn-secondary" (click)="onsubmit()">Submit</button>
+
+<div *ngFor="let list of weatherReport; let i=index">
+  <div>{{list.dt_txt | date:'EEEE'}}
+    {{list.main.temp }}</div>
+</div>
