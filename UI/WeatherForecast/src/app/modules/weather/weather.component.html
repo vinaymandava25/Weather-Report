@@ -1,7 +1,22 @@
-your location: <input type="text" class="form-control-sm" [(ngModel)]='location'>
-<button class="btn btn-secondary" (click)="onsubmit()">Submit</button>
-
-<div *ngFor="let list of weatherReport; let i=index">
-  <div>{{list.dt_txt | date:'EEEE'}}
-    {{list.main.temp }}</div>
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="card col-6">
+      your location: <input type="text" class="form-control-sm" [(ngModel)]='location' required>
+      <input type="submit" class="btn btn-secondary" (click)="onsubmit()" value="Submit">
+    </div>
+    <div class="col-3"></div>
+  </div>
+  <table class="row table ">
+    <thead>
+      <tr>
+        <th scope="cols"  *ngFor="let day of days;">{{day | date:'EEEE'}}</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td *ngFor="let temp of temparatures" colspan="5">{{temp}} </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

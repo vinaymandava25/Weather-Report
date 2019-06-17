@@ -15,6 +15,6 @@ export class WeatherService {
   constructor(private http:HttpClient) { }
 
   initReport(location) {
-    return this.http.get( 'http://api.openweathermap.org/data/2.5/forecast?q='+location+ '&apiKey=' + this.api_key);
+    return this.http.get( 'http://api.openweathermap.org/data/2.5/forecast?q='+location+ '&apiKey=' + this.api_key+"&units=metric");
   }
 }
